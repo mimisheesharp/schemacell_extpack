@@ -1,6 +1,7 @@
 {
     "Lua.diagnostics.globals": [
-        "grid"
+        "grid",
+        "input"
     ],
     "Lua.diagnostics.disable": [
         "lowercase-global"

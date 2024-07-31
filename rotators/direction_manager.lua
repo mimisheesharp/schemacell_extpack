@@ -10,6 +10,10 @@ function Step(this)
         table.insert(cells, this.GetCell(i, 1))
     end
     for cell in cells do
-        cell.direction = this.direction
+        if cell.name == "VOLT" then
+            cell.direction = this.direction -1
+        else
+            cell.direction = this.direction
+        end
     end
 end
