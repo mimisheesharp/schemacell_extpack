@@ -7,7 +7,7 @@ function Step(this)
     for i=0, 3, 1 do
     local front = this.GetCell(i,1)
         if front.name ~= "EMPTY" then 
-            if front.name == "VOLT" then
+            if front.name == "VOLT" or front.name == "PUSHER" then
                 front.direction = this.direction -1
             else
                 front.direction = this.direction
