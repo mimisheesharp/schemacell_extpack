@@ -6,13 +6,16 @@ updateIndex = 9030
 
 function Step(this)
     local back = this.GetCell(this.direction, -1)
-    this.GetCell(this.direction, 1).Push(this.direction, 1)
+
+    if back.name ~= "EMPTY" then
+        this.GetCell(this.direction, 1).Push(this.direction, 1)
     if this.direction == 0 or this.direction == 2 then
     this.GetCellXY(this.GetCell(this.direction, 1).x, this.GetCell(this.direction, 1).y+1).Push(this.direction, 1)
     this.GetCellXY(this.GetCell(this.direction, 1).x, this.GetCell(this.direction, 1).y-1).Push(this.direction, 1)
     else
         this.GetCellXY(this.GetCell(this.direction, 1).x+1, this.GetCell(this.direction, 1).y).Push(this.direction, 1)
         this.GetCellXY(this.GetCell(this.direction, 1).x-1, this.GetCell(this.direction, 1).y).Push(this.direction, 1)
+    end
     end
     local front = this.GetCell(this.direction, 1)
     if front.name == "EMPTY" then

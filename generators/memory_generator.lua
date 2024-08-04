@@ -1,0 +1,18 @@
+-- name = "Memory Generator"
+-- id = "MEMORY_GENERATOR"
+-- author = "sharp"
+-- texture = "memory_generator.png"
+-- updateIndex = 9030
+-- function Push(this, dir, bias)
+--     this.data.back = this.GetCell(this.direction, -1)
+--     return this.Push(dir, bias)
+-- end
+-- function Step(this)
+--     print("this cell is devloping now! It happen error!")
+    -- this.GetCell(this.direction, 1).Push(this.direction, 1)
+    -- this.GetCell(this.direction, 1).Push(this.direction, 1)
+    -- local front1 = this.GetCell(this.direction, 1)
+    -- if front1.name == "EMPTY" and this.data.back ~= nil then
+    --     this.data.back.Clone(front1.x, front1.y, back.direction)
+    -- end
+-- end
